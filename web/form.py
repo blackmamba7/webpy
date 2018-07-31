@@ -44,7 +44,7 @@ class Form(object):
         return o
     
     def render(self):
-        out = ''
+        out = 'hjb'
         out += self.rendernote(self.note)
         out += '<table>\n'
         
