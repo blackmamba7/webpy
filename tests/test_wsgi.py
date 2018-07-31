@@ -1,50 +1,50 @@
-import unittest
-import web
-import threading, time
+# import unittest
+# import web
+# import threading, time
 
-class WSGITest(unittest.TestCase):
-    def test_layers_unicode(self):
-        urls = (
-            '/', 'uni',
-        )
+# class WSGITest(unittest.TestCase):
+#     def test_layers_unicode(self):
+#         urls = (
+#             '/', 'uni',
+#         )
 
-        class uni:
-            def GET(self):
-                return u"\u0C05\u0C06"
+#         class uni:
+#             def GET(self):
+#                 return u"\u0C05\u0C06"
 
-        app = web.application(urls, locals())
+#         app = web.application(urls, locals())
 
-        thread = threading.Thread(target=app.run)
-        thread.start()
-        time.sleep(0.5)
+#         thread = threading.Thread(target=app.run)
+#         thread.start()
+#         time.sleep(0.5)
 
-        b = web.browser.Browser()
-        r = b.open('/').read()
-        s = r.decode('utf8')
-        self.assertEqual(s, u"\u0C05\u0C06")
+#         b = web.browser.Browser()
+#         r = b.open('/').read()
+#         s = r.decode('utf8')
+#         self.assertEqual(s, u"\u0C05\u0C06")
 
-        app.stop()
-        thread.join()
+#         app.stop()
+#         thread.join()
 
 
-    def test_layers_bytes(self):
-        urls = (
-            '/', 'bytes',
-        )
+#     def test_layers_bytes(self):
+#         urls = (
+#             '/', 'bytes',
+#         )
 
-        class bytes:
-            def GET(self):
-                return b'abcdef'
+#         class bytes:
+#             def GET(self):
+#                 return b'abcdef'
 
-        app = web.application(urls, locals())
+#         app = web.application(urls, locals())
 
-        thread = threading.Thread(target=app.run)
-        thread.start()
-        time.sleep(0.5)
+#         thread = threading.Thread(target=app.run)
+#         thread.start()
+#         time.sleep(0.5)
 
-        b = web.browser.Browser()
-        r = b.open('/')
-        self.assertEqual(r.read(), b'abcdef')
+#         b = web.browser.Browser()
+#         r = b.open('/')
+#         self.assertEqual(r.read(), b'abcdef')
 
-        app.stop()
-        thread.join()
+#         app.stop()
+#         thread.join()
