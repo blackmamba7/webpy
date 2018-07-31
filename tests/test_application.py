@@ -320,22 +320,22 @@ class ApplicationTest(unittest.TestCase):
         app.request('/bar')
         self.assertEquals(x.a, 2)
         
-    def test_changequery(self):
-        urls = (
-            '/', 'index',
-        )
-        class index:
-            def GET(self):
-                return web.changequery(x=1)
-        app = web.application(urls, locals())
+#     def test_changequery(self):
+#         urls = (
+#             '/', 'index',
+#         )
+#         class index:
+#             def GET(self):
+#                 return web.changequery(x=1)
+#         app = web.application(urls, locals())
                 
-        def f(path):
-            return app.request(path).data
+#         def f(path):
+#             return app.request(path).data
                 
-        self.assertEquals(f('/?x=2'), b'/?x=1')
+#         self.assertEquals(f('/?x=2'), b'/?x=1')
 
-        p = f('/?y=1&y=2&x=2')
-        self.assertTrue(p == b'/?y=1&y=2&x=1' or p == b'/?x=1&y=1&y=2')
+#         p = f('/?y=1&y=2&x=2')
+#         self.assertTrue(p == b'/?y=1&y=2&x=1' or p == b'/?x=1&y=1&y=2')
         
     def test_setcookie(self):
         urls = (
