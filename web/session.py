@@ -161,7 +161,8 @@ class Session(object):
         return session_id
 
     def _valid_session_id(self, session_id):
-        rx = utils.re_compile('^[0-9a-fA-F]+$')
+        #rx = utils.re_compile('^[0-9a-fA-F]+$')
+        rx = utils.re_compile('^[0-9]+$')
         return rx.match(session_id)
         
     def _cleanup(self):
