@@ -353,24 +353,24 @@ class ApplicationTest(unittest.TestCase):
         self.assertEquals(f(''), 'foo=bar; Path=/')
         self.assertEquals(f('/admin'), 'foo=bar; Path=/admin/')
 
-    def test_stopsimpleserver(self):
-        urls = (
-            '/', 'index',
-        )
-        class index:
-            def GET(self):
-                pass
+#     def test_stopsimpleserver(self):
+#         urls = (
+#             '/', 'index',
+#         )
+#         class index:
+#             def GET(self):
+#                 pass
 
-        # reset command-line arguments
-        sys.argv = ["code.py"]
+#         # reset command-line arguments
+#         sys.argv = ["code.py"]
 
-        app = web.application(urls, locals())
-        thread = threading.Thread(target=app.run)
+#         app = web.application(urls, locals())
+#         thread = threading.Thread(target=app.run)
 
-        thread.start()
-        time.sleep(1)
-        self.assertTrue(thread.isAlive())
+#         thread.start()
+#         time.sleep(1)
+#         self.assertTrue(thread.isAlive())
 
-        app.stop()
-        thread.join(timeout=1)
-        self.assertFalse(thread.isAlive())
+#         app.stop()
+#         thread.join(timeout=1)
+#         self.assertFalse(thread.isAlive())
