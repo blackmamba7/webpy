@@ -44,7 +44,7 @@ class Form(object):
         return o
     
     def render(self):
-        out = 'hjb'
+        out = ''
         out += self.rendernote(self.note)
         out += '<table>\n'
         
@@ -226,7 +226,7 @@ class Textarea(Input):
         attrs = self.attrs.copy()
         attrs['name'] = self.name
         value = net.websafe(self.value or '')
-        return '<textarea %s>%s</textarea>' % (attrs, value)
+        return '<textarea %s>%s</textarea>' % (attrs+"hello", value)
 
 class Dropdown(Input):
     r"""Dropdown/select input.
