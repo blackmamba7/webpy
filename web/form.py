@@ -226,7 +226,7 @@ class Textarea(Input):
         attrs = self.attrs.copy()
         attrs['name'] = self.name
         value = net.websafe(self.value or '')
-        return '<textarea %s>%s</textarea>' % (attrs+"hello", value)
+        return '<textarea %s>%s</textarea>' % (attrs+, value)
 
 class Dropdown(Input):
     r"""Dropdown/select input.
