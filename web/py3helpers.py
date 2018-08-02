@@ -3,6 +3,7 @@
 import sys
 #kobe
 #Hello darkness
+#My old friend
 PY2 = sys.version_info[0] == 2
 
 # urljoin
