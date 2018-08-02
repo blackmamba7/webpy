@@ -86,7 +86,8 @@ class application:
                 
             mapping_name = utils.dictfind(fvars, mapping)
             module_name = modname(fvars)
-            
+            #commenting like a pro
+            #racing like fernando
             def reload_mapping():
                 """loadhook to reload mapping and fvars."""
                 mod = __import__(module_name, None, None, [''])
@@ -339,7 +340,12 @@ class application:
         function.
         """
         return wsgi.runwsgi(self.wsgifunc(*middleware))
-
+# come on, come on, come, come on baby now
+# Come on and work it on out
+# Well, work it on out, honey
+# You know you look so good
+# You know you got me goin' now
+# Just like I know you would
     def stop(self):
         """Stops the http server started by run.
         """
