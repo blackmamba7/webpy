@@ -1,14 +1,4 @@
 web.py is in the public domain; it can be used for whatever purpose with absolutely no restrictions.
 Surely.
-Our infrastructure and how we continuously integrate and deliver (CI/CD) our code changes with each piece of work we finish. We fully expect that it will change even more as we bring up A|B functionality & enhance our testing process.
-Flow charts are important for displaying a technical process, using specific symbols which denote each step
-asd
-sad
-ads
-dsa
-dsa
-sad
-asd
-asdoiuqwghelij
-dqwghqwildj;qwd
-sadkug
+Our final test
+HERE WE are now entertain us!
