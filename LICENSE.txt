@@ -2,3 +2,5 @@ web.py is in the public domain; it can be used for whatever purpose with absolut
 Surely.
 Our final test
 HERE WE are now entertain us!
+The D-day is here
+Here we go...
